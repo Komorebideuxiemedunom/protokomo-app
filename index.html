@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProtoKomo – Assistance</title>
+<meta name="description" content="ProtoKomo pour iPhone : modifiez votre site web avec Claude, en français, sans ordinateur allumé.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<img class="logo" src="logo.png" alt="Icône de ProtoKomo">
+<h1>ProtoKomo</h1>
+<p>Modifiez votre site web depuis l'iPhone en expliquant ce que vous voulez en français. Claude Code fait la modification, vous voyez le résultat sur mobile, tablette ou en 16:9, puis vous publiez.</p>
+<p>Une question, un problème ? <a class="button" href="https://github.com/Komorebideuxiemedunom/protokomo-app/issues/new">Écrivez-nous</a></p>
+
+<h2>Questions fréquentes</h2>
+<details><summary>De quoi ai-je besoin ?</summary>
+<p>D'un site dont le code est sur GitHub, d'un jeton d'accès GitHub, et d'une clé API Claude créée sur <a href="https://console.anthropic.com/settings/keys">console.anthropic.com</a> (avec du crédit). L'app vous guide pas à pas. La démonstration intégrée se passe de tout cela.</p></details>
+<details><summary>Combien coûte l'usage de Claude ?</summary>
+<p>Claude est facturé directement par Anthropic sur votre compte, au réel : le texte traité par le modèle et le temps de travail dans l'espace hébergé. L'app affiche le coût de chaque session et applique un plafond réglable (3 $ par défaut). ProtoKomo ne prend aucune commission.</p></details>
+<details><summary>Que débloque ProtoKomo Premium ?</summary>
+<p>Les demandes à Claude depuis l'iPhone. Un seul achat, à vie, sans abonnement. Parcourir vos sites, l'aperçu et la démonstration sont gratuits. Pour retrouver votre achat sur un nouvel iPhone : Réglages → « Restaurer un achat ».</p></details>
+<details><summary>Mes modifications sont-elles en ligne tout de suite ?</summary>
+<p>Non. Chaque demande est enregistrée dans un brouillon (la branche « protokomo-brouillon » de votre dépôt). Rien ne change sur votre site avant « Publier ». Une modification se défait avec « Annuler la dernière modification ».</p></details>
+<details><summary>Le site ne s'affiche pas dans l'aperçu</summary>
+<p>Les sites qui se construisent (Vite, Astro, Next…) sont préparés par Claude : touchez « Demander l'aperçu à Claude ». Un site qui a besoin d'un serveur (base de données, PHP) ne peut pas s'afficher en entier.</p></details>
+<details><summary>Le jeton GitHub est refusé</summary>
+<p>Créez un jeton « fine-grained » avec l'accès à vos sites et la permission « Contents » en lecture et écriture, puis collez-le dans Réglages → GitHub.</p></details>
+
+<h2>Informations</h2>
+<ul>
+<li><a href="confidentialite.html">Politique de confidentialité</a></li>
+<li>Éditeur : Lucas DANSAC</li>
+</ul>
+<p class="meta">Claude est une marque d'Anthropic ; ProtoKomo n'est ni affilié à Anthropic ni approuvé par Anthropic. GitHub est une marque de GitHub, Inc.</p>
+</main>
+</body>
+</html>
