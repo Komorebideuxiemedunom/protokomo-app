@@ -10,22 +10,21 @@
 <main>
 <p class="back"><a href="index.html">← ProtoKomo</a></p>
 <h1>Politique de confidentialité</h1>
-<p class="meta">Application ProtoKomo pour iPhone · en vigueur le 12 octobre 2026</p>
+<p class="meta">Application ProtoKomo pour iPhone · en vigueur le 12 octobre 2026 (mise à jour : poste de travail)</p>
 
 <h2>En bref</h2>
-<p>ProtoKomo n'a pas de serveur et ne collecte aucune donnée. L'app parle directement, depuis votre iPhone, à Anthropic (pour Claude) et à GitHub (pour votre site), avec vos propres comptes. L'éditeur n'a accès ni à vos sites, ni à vos demandes, ni à vos identifiants.</p>
+<p>ProtoKomo n'a pas de serveur et ne collecte aucune donnée. L'app parle directement, depuis votre iPhone, à GitHub, avec votre compte. Claude Code travaille dans votre propre dépôt GitHub (votre « poste de travail ») avec votre abonnement Claude. L'éditeur n'a accès ni à vos sites, ni à vos demandes, ni à vos identifiants, et ne voit jamais votre jeton Claude.</p>
 
 <h2>Ce qui reste sur l'iPhone</h2>
 <ul>
-<li><strong>Votre clé API Claude et votre jeton GitHub</strong> : dans le trousseau de l'iPhone, accessibles seulement quand il est déverrouillé, jamais copiés vers un autre appareil.</li>
+<li><strong>Votre jeton GitHub</strong> : dans le trousseau de l'iPhone, accessible seulement quand il est déverrouillé, jamais copié vers un autre appareil.</li>
 <li><strong>Vos conversations avec Claude et les aperçus</strong> : dans l'app, chiffrés par la protection des données d'iOS. « Se déconnecter et effacer les données » (Réglages) les supprime.</li>
-<li><strong>Vos réglages</strong> : modèle, plafond de dépense.</li>
 </ul>
 
 <h2>Ce qui part, et vers qui</h2>
 <ul>
-<li><strong>Anthropic</strong> (api.anthropic.com), avec votre clé : vos demandes, le code de votre site (monté dans un espace de travail hébergé par Anthropic) et ce que Claude produit. Ces données sont traitées selon les <a href="https://www.anthropic.com/legal/privacy">conditions d'Anthropic</a> applicables à votre compte. Le jeton GitHub transmis pour ouvrir votre dépôt reste chez Anthropic, hors de l'espace de travail de Claude.</li>
-<li><strong>GitHub</strong> (api.github.com), avec votre jeton : la liste de vos dépôts, l'historique et le brouillon de votre site, la publication. Voir la <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement">déclaration de confidentialité de GitHub</a>.</li>
+<li><strong>GitHub</strong> (api.github.com), avec votre jeton : la liste de vos dépôts, l'historique et le brouillon de votre site, la publication, et votre poste de travail, un dépôt privé « protokomo-poste » créé dans votre compte. L'app y range votre jeton GitHub, chiffré pour GitHub, dans les secrets du dépôt, et y envoie vos demandes ; l'avancement et les aperçus y sont enregistrés. Voir la <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement">déclaration de confidentialité de GitHub</a>.</li>
+<li><strong>Anthropic</strong> : dans votre poste de travail, Claude Code (le programme officiel d'Anthropic) envoie à Anthropic vos demandes et le code nécessaire, avec votre abonnement Claude, selon les <a href="https://www.anthropic.com/legal/privacy">conditions d'Anthropic</a> applicables à votre compte. Vous connectez cet abonnement vous-même, sur la page d'Anthropic ; le jeton est rangé dans votre dépôt et ne passe jamais par l'app.</li>
 <li><strong>Apple</strong> : l'achat de ProtoKomo Premium passe par l'App Store.</li>
 </ul>
 
