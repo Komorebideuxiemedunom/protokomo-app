@@ -3,16 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProtoKomo – Assistance</title>
+<title>ProtoKomo : assistance</title>
 <meta name="description" content="ProtoKomo pour iPhone : modifiez votre site web avec Claude, en français, sans ordinateur allumé.">
+<link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<img class="logo" src="logo.png" alt="Icône de ProtoKomo">
-<h1>ProtoKomo</h1>
-<p>Modifiez votre site web depuis l'iPhone en expliquant ce que vous voulez en français. Claude Code fait la modification avec votre abonnement Claude, vous voyez le résultat sur mobile, tablette ou en 16:9, puis vous publiez.</p>
-<p>Une question, un problème ? <a class="button" href="https://github.com/Komorebideuxiemedunom/protokomo-app/issues/new">Écrivez-nous</a></p>
+<a class="marque" href="index.html"><img src="logo.png" alt="">ProtoKomo</a>
+<p class="correction" aria-label="Exemple : Ouvert du mardi au samedi devient Ouvert tous les jours sauf le lundi">Ouvert <del>du mardi au samedi</del> <ins>tous les jours sauf le lundi</ins></p>
+<p class="demande"><b>Votre demande</b>« On ouvre aussi le dimanche maintenant, change les horaires sur le site. »</p>
+<h1>Modifiez votre site depuis l'iPhone, en le disant</h1>
+<p class="chapeau">Expliquez ce que vous voulez en français. Claude Code fait la modification avec votre abonnement Claude, vous voyez le résultat sur mobile, tablette ou en 16:9, puis vous publiez.</p>
+<div class="aide"><p>Une question, un problème ?</p><a class="button" href="https://github.com/Komorebideuxiemedunom/protokomo-app/issues/new">Écrivez-nous</a></div>
 
 <h2>Questions fréquentes</h2>
 <details><summary>De quoi ai-je besoin ?</summary>
@@ -22,13 +25,13 @@
 <details><summary>Le poste de travail ne démarre pas</summary>
 <p>Si GitHub indique un problème de facturation ou de limite de dépense, vos minutes gratuites de GitHub Actions sont épuisées ou un paiement a échoué : voyez « Billing and plans » dans les réglages de votre compte GitHub.</p></details>
 <details><summary>Que débloque ProtoKomo Premium ?</summary>
-<p>Les demandes à Claude depuis l'iPhone. Un seul achat, à vie, sans abonnement. Parcourir vos sites, l'aperçu et la démonstration sont gratuits. Pour retrouver votre achat sur un nouvel iPhone : Réglages → « Restaurer un achat ».</p></details>
+<p>Les demandes à Claude depuis l'iPhone. Un seul achat, à vie, sans abonnement. Parcourir vos sites, l'aperçu et la démonstration sont gratuits. Pour retrouver votre achat sur un nouvel iPhone : Réglages › « Restaurer un achat ».</p></details>
 <details><summary>Mes modifications sont-elles en ligne tout de suite ?</summary>
 <p>Non. Chaque demande est enregistrée dans un brouillon (la branche « protokomo-brouillon » de votre dépôt). Rien ne change sur votre site avant « Publier ». Une modification se défait avec « Annuler la dernière modification ».</p></details>
 <details><summary>Le site ne s'affiche pas dans l'aperçu</summary>
 <p>Les sites qui se construisent (Vite, Astro, Next…) sont préparés par Claude : touchez « Demander l'aperçu à Claude ». Un site qui a besoin d'un serveur (base de données, PHP) ne peut pas s'afficher en entier.</p></details>
 <details><summary>Le jeton GitHub est refusé</summary>
-<p>Créez un jeton « fine-grained » avec l'accès à vos sites et la permission « Contents » en lecture et écriture, puis collez-le dans Réglages → GitHub.</p></details>
+<p>Créez un jeton « fine-grained » avec l'accès à vos sites et la permission « Contents » en lecture et écriture, puis collez-le dans Réglages › GitHub.</p></details>
 
 <h2>Informations</h2>
 <ul>

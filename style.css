@@ -1,14 +1,43 @@
-:root { --bg: #f7f8fa; --fg: #16181d; --muted: #4b515c; --accent: #4a5ae0; --soft: #e9ebfc; --border: #e3e5ea; }
-@media (prefers-color-scheme: dark) { :root { --bg: #0f1115; --fg: #e7e9ed; --muted: #aab0bb; --accent: #8d99ff; --soft: #1d2140; --border: #23272e; } }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
-h1 { font-size: 2rem; margin: 0.2em 0; letter-spacing: -0.01em; }
-h2 { font-size: 1.15rem; margin-top: 2em; }
-.meta, .back { color: var(--muted); font-size: 0.95rem; }
-a { color: var(--accent); }
-li { margin: 0.4em 0; }
-.logo { width: 96px; height: 96px; border-radius: 22px; }
-.button { display: inline-block; background: var(--soft); color: var(--accent); padding: 12px 20px; border-radius: 12px; text-decoration: none; font-weight: 600; }
-details { border-top: 1px solid var(--border); padding: 12px 0; }
-summary { cursor: pointer; font-weight: 600; }
+/* ProtoKomo : une page qu'on corrige. Newsreader pour le texte, Martian Mono pour les annotations, un surligneur jaune. Échelle de 8 px. */
+@font-face{font-family:"Newsreader";src:url(fonts/newsreader.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Martian Mono";src:url(fonts/martian-mono.woff2) format("woff2");font-weight:100 800;font-display:swap}
+:root{--bg:#F7F5F0;--fg:#1A1A1A;--muted:#4B4B4B;--surligne:#F5D547;--trait:#DDD9CF;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--s8:64px}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#F0EEE8;--muted:#B8B5AD;--trait:#2D2D2D}}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;color:var(--fg);font:400 20px/1.6 "Newsreader",Georgia,serif;font-optical-sizing:auto}
+main{max-width:1000px;margin:0 auto;padding:var(--s4) var(--s3) var(--s8)}
+a{color:var(--fg);text-decoration-color:var(--surligne);text-decoration-thickness:3px;text-underline-offset:4px}
+a:hover,a:focus-visible{background:var(--surligne);color:#1A1A1A;text-decoration:none}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+p,li{color:var(--muted);max-width:62ch}strong{color:var(--fg);font-weight:650}
+.marque{display:inline-flex;align-items:center;gap:12px;color:var(--fg);text-decoration:none;font:600 14px "Martian Mono",monospace;margin-bottom:var(--s8)}
+.marque:hover{background:none;color:var(--fg)}
+.marque img{width:36px;height:36px;border-radius:9px}
+.meta,.back{color:var(--muted);font:400 13px/1.7 "Martian Mono",monospace}
+h1{font-weight:700;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.025em;margin:0 0 var(--s3);max-width:18ch}
+h2{font:600 13px "Martian Mono",monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--fg);margin:var(--s8) 0 var(--s2)}
+li{margin:var(--s1) 0}
+.chapeau{font-size:clamp(22px,2.4vw,28px);line-height:1.4;color:var(--fg);max-width:36ch}
+
+/* La correction : la signature de ProtoKomo */
+.correction{font-weight:700;font-size:clamp(48px,8.6vw,112px);line-height:1;letter-spacing:-.035em;margin:0 0 var(--s4);max-width:none;color:var(--fg)}
+.correction del{color:var(--muted);text-decoration-thickness:.07em;font-weight:400}
+.correction ins{text-decoration:none;background:var(--surligne);color:#1A1A1A;padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.demande{display:flex;gap:var(--s2);align-items:baseline;font:400 14px/1.6 "Martian Mono",monospace;color:var(--muted);border-left:3px solid var(--surligne);padding-left:var(--s2);margin:0 0 var(--s6);max-width:60ch}
+.demande b{color:var(--fg);font-weight:600;white-space:nowrap}
+
+.button{display:inline-block;background:var(--fg);color:var(--bg);padding:14px 22px;text-decoration:none;font:600 14px "Martian Mono",monospace}
+.button:hover,.button:focus-visible{background:var(--surligne);color:#1A1A1A}
+.aide{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s3);border-top:1px solid var(--fg);border-bottom:1px solid var(--fg);padding:var(--s3) 0;margin:var(--s6) 0}
+.aide p{margin:0}
+details{border-top:1px solid var(--trait);padding:var(--s2) 0}
+details:last-of-type{border-bottom:1px solid var(--trait)}
+summary{cursor:pointer;font-weight:650;font-size:24px;line-height:1.3;list-style:none;display:flex;justify-content:space-between;gap:var(--s3)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 20px "Martian Mono",monospace;color:var(--muted)}
+details[open] summary::after{content:"–"}
+summary:hover{text-decoration:underline;text-decoration-color:var(--surligne);text-decoration-thickness:3px;text-underline-offset:5px}
+details p{margin:var(--s1) 0 var(--s1)}
+@media (max-width:720px){main{padding:var(--s3) var(--s2) var(--s6)}.marque{margin-bottom:var(--s6)}summary{font-size:21px}.demande{flex-direction:column;gap:4px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
